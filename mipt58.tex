@@ -129,16 +129,6 @@
 
 \end{frame}
 
-
-% \begin{frame}{Name}
-% \begin{itemize}
-%   \item
-%   {
-      
-%   }
-% \end{itemize}
-% \end{frame}
-
 \subsection{Задача 2D картографирования}
 
 \begin{frame}{Задача 2D картографирования}
@@ -294,7 +284,10 @@ $P(z_t|m_{ij}, z_{1:t-1}) = P(z_t|m_{ij})$ - для сонаров плохое 
 \end{frame}
 
 \begin{frame}{Алгоритм с обратной моделью сенсора}
-TODO вставть рисуночек с нашими результатами
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{inv_ex.png}
+  \end{figure}
 \end{frame}
 
 \subsection{Алгоритм с прямой моделью сенсора}
@@ -318,7 +311,7 @@ TODO вставть рисуночек с нашими результатами
   }
   \item
   {
-    В обычной реализации работает не в режиме реальном времени
+    Прямая реализация алгоритма не подразумевает работу в режиме реального времени
   }
 \end{itemize}
 \end{frame}
@@ -326,17 +319,12 @@ TODO вставть рисуночек с нашими результатами
 \subsection{Итеративный алгоритм с прямой моделью сенсора}
 
 \begin{frame}{Итеративный алгоритм с прямой моделью сенсора}
-Пусть есть некоторая карта $m$ и список наблюдений сонаров $S$, тогда:
+Пусть есть некоторая карта $m$ и список наблюдений сонаров $z$, тогда:
 \begin{itemize}
   \item
   {
-    Учитывая, что большинство клеток должны быть свободными, штрафуем все черные клетки на величину $-p_{free}$. Таким образом значение функцинала $$\phi_{free}(m^{k}) = \sum_{x \in m: x=1}{-p_{free}}$$
+    Реальное окружение таково, что большинство клеток будут свободными, поэтому штрафуем все черные клетки на величину $-p_{free}$. Таким образом значение функцинала $$\phi_{free}(m^{k}) = \sum_{x \in m: x=1}{-p_{free}}$$
   }
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{map_ex.png}
-  \end{figure}
-
 \end{itemize}
 \end{frame}
 
@@ -463,14 +451,104 @@ TODO вставть рисуночек с нашими результатами
 
 
 
-\section{Результаты и дальнейшие работы}
-\begin{frame}{Результаты и дальнейшие работы}
+\section{Результаты и дальнейшие планы}
+\begin{frame}{Результаты}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+  
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{inv_line_ex.png}
+  \end{figure}
+
+\end{column}
+\begin{column}{0.5\textwidth}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{line_ex.png}
+  \end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Результаты}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+  
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{inv_arc_ex.png}
+  \end{figure}
+
+\end{column}
+\begin{column}{0.5\textwidth}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{arc_ex.png}
+  \end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Результаты}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+  
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{inv_room_ex.png}
+  \end{figure}
+
+\end{column}
+\begin{column}{0.5\textwidth}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{room_ex.png}
+  \end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Результаты и дальнейшие планы}
+Результаты
 \begin{itemize}
   \item
   {
-    
+    Реализован алгоритм с обратной моделью сонара
   }
-  \end{itemize}
+  \item
+  {
+    Разработан и реализован алгоритм с прямой моделью, который (пока) использует все накопленные даные сонаров
+  }
+  \item
+  {
+    Скрипты для создания исскуственных данных для тестирования
+  }
+\end{itemize}
+Планы
+\begin{itemize}
+  
+  \item
+  {
+    Поиск оптимальных параметров алгоритма с прямой моделью
+  }
+  \item
+  {
+    Дальнейшее улучшение прямой модели
+  }
+  \item
+  {
+    Сбор и тестирование на реальных/сгенерированных данных
+  }
+  \item
+  {
+    Разобраться с проблемой забывчивости карты
+  }
+  \item
+  {
+    ...
+  }
+\end{itemize}
 \end{frame}
 
 % \begin{frame}{Name}
@@ -493,29 +571,29 @@ TODO вставть рисуночек с нашими результатами
     
   \begin{thebibliography}{10}
     
-  % \beamertemplatebookbibitems
+  \beamertemplatebookbibitems
   % Start with overview books.
 
-  % \bibitem{ LL }
-  %   Wolfram Burgard, Diego Tipaldi
-  %   \newblock {\url{http://ais.informatik.uni-freiburg.de/teaching/ss15/robotics/slides/17-3dmapping.pdf}}
+  \bibitem{ LL }
+    Thrun S. [at al.]
+    \newblock {Probabilistic robotics.}
+    \newblock {\em Cambridge: MIT, 2005. – 672 с.}
 
   %   \newblock {\em Материалы лекции Фрайбургского университета по курсу Introduction to
   %   Mobile Robotics - Techniques for 3D Mapping}.
  
-  % \beamertemplatearticlebibitems
-  % % Followed by interesting articles. Keep the list short. 
+  \beamertemplatearticlebibitems
+  % Followed by interesting articles. Keep the list short. 
 
-  % \bibitem{OctoMap}
-  %   Armin Hornung, Kai M. Wurm, Maren Bennewitz, Cyrill Stachniss, Wolfram Burgard
-  %   \newblock {OctoMap:
-  % An Efficient Probabilistic 3D Mapping Framework Based on Octrees}
-  %   \newblock {\em Autonomous Robots April 2013, Volume 34, Issue 3, pp 189-206}
+  \bibitem{thr}
+    Thrun S.
+    \newblock {Learning Occupancy Grid Maps with Forward Sensor Models.}
+    \newblock {\em Autonomous Robots. – 2003. – V. 15, I. 2. – p. 111-127.}
 
-  % \bibitem{MLS}
-  %   Rudolph Triebel, Patrick Pfaff, Wolfram Burgard
-  %   \newblock {Multi-Level Surface Maps for Outdoor Terrain Mapping and Loop Closing}
-  %   \newblock {\em In Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS ’06)}
+  \bibitem{Elfes}
+    A. Elfes  
+    \newblock {Occupancy Grids: A Stochastic Spatial Representation for Active Robot Perception.}
+    \newblock {\em arXiv preprint arXiv:1304.1098. – 2013.}
 
   \end{thebibliography}
 \end{frame}
