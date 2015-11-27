@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1448578281 "mipt58.tex" "mipt58.pdf" "mipt58" 1448578284
+["pdflatex"] 1448631817 "mipt58.tex" "mipt58.pdf" "mipt58" 1448631819
   "/etc/texmf/web2c/texmf.cnf" 1444074713 1101 af7716885e081ab43982cab7b4672c1a ""
   "/home/den/.texmf-var/fonts/tfm/lh/lh-t2a/lasi0900.tfm" 1447592614 3532 861c86aefe36d5783fe3fe3cf9fc08ed ""
   "/home/den/.texmf-var/fonts/tfm/lh/lh-t2a/lass0500.tfm" 1447587584 3344 04cc4fceacac9c26311c189d8cf8dfa8 ""
@@ -217,15 +217,15 @@
   "images/inv_room_ex.png" 1448574284 1192 55f38258ffeb818a1a694e772c814efd ""
   "images/line_ex.png" 1448576013 1131 956646e70522ba0ea49304b254ff9484 ""
   "images/room_ex.png" 1448575638 911 cc93b8d8783280b146beb5bdc82728ab ""
-  "mipt58.aux" 1448578283 20964 f5f2badba4a551cb8820e2ad5fd1883a ""
-  "mipt58.nav" 1448578283 14723 fd4c1e0ceb6369de5b05322cba5d99ce ""
-  "mipt58.out" 1448578283 605 f0f5e43bd602536b0ed4540cf30d095f ""
-  "mipt58.tex" 1448578281 16366 1b29b8d604144f9d29e62e2ce685dd56 ""
+  "mipt58.aux" 1448631819 20964 f5f2badba4a551cb8820e2ad5fd1883a ""
+  "mipt58.nav" 1448631819 14723 fd4c1e0ceb6369de5b05322cba5d99ce ""
+  "mipt58.out" 1448631819 605 f0f5e43bd602536b0ed4540cf30d095f ""
+  "mipt58.tex" 1448631816 16356 b529fe30d8d091968361d66c86d0db10 ""
   (generated)
   "mipt58.out"
-  "mipt58.log"
   "mipt58.aux"
-  "mipt58.toc"
   "mipt58.pdf"
   "mipt58.nav"
   "mipt58.snm"
+  "mipt58.toc"
+  "mipt58.log"
